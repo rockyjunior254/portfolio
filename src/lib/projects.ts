@@ -27,4 +27,13 @@ export const projects: Project[] = [
     features: ['Destination exploration', 'Trip planning', 'Mobile-first experience'],
     accent: 'gold',
   },
+  {
+    name: 'POS Business Systems',
+    eyebrow: 'Business operations platform',
+    url: '',
+    description: 'Point-of-sale systems designed for hardware stores, bars, restaurants, and retail shops—bringing everyday operations into one reliable business view.',
+    technologies: ['React', 'Node.js', 'Database Design'],
+    features: ['Inventory control', 'Sales tracking', 'Reporting & analytics'],
+    accent: 'violet',
+  },
 ];
