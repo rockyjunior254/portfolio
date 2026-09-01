@@ -1,6 +1,221 @@
-/* Portrait-only refinement: keep the supporting image natural and fully visible. */
-.profile-card{width:280px;padding:8px;border-radius:16px;background:linear-gradient(145deg,#fff,#f3f1ec);box-shadow:0 18px 40px #23282016}
-.profile-image{height:360px;border-radius:11px;background:#ebe6dc}
-.profile-image img{object-fit:contain!important;object-position:center center!important}
-.profile-card footer{display:none}
-@media(max-width:760px){.profile-card{width:250px}.profile-image{height:325px}}
+.home-hero-modern {
+  min-height: calc(88vh - 80px);
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 60px;
+  align-items: center;
+  padding: 60px 0 80px;
+}
+
+.hero-copy-modern {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-status-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--violet-subtle);
+  border: 1px solid rgba(99, 68, 231, 0.25);
+  color: var(--violet);
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin-bottom: 24px;
+  align-self: flex-start;
+}
+
+.hero-title-modern {
+  font-size: clamp(42px, 5.2vw, 68px);
+  letter-spacing: -3.5px;
+  line-height: 1.04;
+  font-weight: 800;
+  color: var(--ink);
+  margin: 0 0 24px;
+}
+
+.hero-title-modern em {
+  font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+  font-style: italic;
+  font-weight: 400;
+  color: var(--violet);
+  position: relative;
+}
+
+.hero-subtitle-modern {
+  font-size: 18px;
+  line-height: 1.7;
+  color: var(--muted);
+  max-width: 600px;
+  margin: 0 0 32px;
+}
+
+.hero-quick-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 36px;
+}
+
+.hero-quick-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  background: #ffffff;
+  border: 1px solid var(--line);
+  padding: 6px 12px;
+  border-radius: 8px;
+  color: var(--ink-secondary);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+}
+
+.hero-quick-tag svg {
+  color: var(--violet);
+}
+
+.hero-actions-modern {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* Profile Card */
+.hero-profile-column {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.profile-card-modern {
+  width: 100%;
+  max-width: 360px;
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  padding: 14px;
+  box-shadow: 0 24px 50px -10px rgba(0, 0, 0, 0.12);
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-card-modern:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.16);
+}
+
+.profile-image-container {
+  position: relative;
+  width: 100%;
+  height: 380px;
+  border-radius: 18px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #ded8ce 0%, #ebe7de 100%);
+}
+
+.profile-image-container img {
+  object-fit: cover !important;
+  object-position: center 20% !important;
+}
+
+.profile-floating-badge {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: rgba(20, 23, 21, 0.85);
+  backdrop-filter: blur(8px);
+  color: #ffffff;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.profile-floating-badge .dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #22c55e;
+}
+
+.profile-card-footer {
+  padding: 16px 10px 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.profile-info strong {
+  font-size: 16px;
+  font-weight: 750;
+  color: var(--ink);
+  display: block;
+}
+
+.profile-info small {
+  font-size: 12px;
+  color: var(--muted);
+  display: block;
+}
+
+.profile-role-tag {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--violet);
+  background: var(--violet-subtle);
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+
+/* Floating Satellite Badges */
+.floating-chip-bottom {
+  position: absolute;
+  bottom: -15px;
+  left: -20px;
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 10px 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
+  font-size: 12px;
+  font-weight: 650;
+  color: var(--ink);
+  z-index: 10;
+}
+
+.floating-chip-bottom svg {
+  color: var(--emerald);
+}
+
+@media (max-width: 960px) {
+  .home-hero-modern {
+    grid-template-columns: 1fr;
+    gap: 50px;
+    padding: 40px 0 60px;
+  }
+
+  .profile-card-modern {
+    max-width: 320px;
+  }
+
+  .profile-image-container {
+    height: 340px;
+  }
+
+  .floating-chip-bottom {
+    left: 10px;
+    bottom: -10px;
+  }
+}
