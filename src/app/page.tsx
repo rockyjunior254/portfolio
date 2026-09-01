@@ -4,7 +4,7 @@ import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { Reveal, Float } from '@/components/Motion';
 import { ProjectCard } from '@/components/ProjectCard';
-import { AIPlatformMockup } from '@/components/AIPlatformMockup';
+import { AIPlatformLazy } from '@/components/AIPlatformLazy';
 import { projects, skillCategories } from '@/lib/projects';
 import { 
   BrainIcon, 
@@ -153,7 +153,7 @@ export default function Home() {
                 <TerminalIcon size={22} className="metric-icon" />
                 <span className="eyebrow" style={{ margin: 0 }}>Academic</span>
               </div>
-              <b>3rd Year</b>
+              <b>4th Year</b>
               <span>B.Sc. Computer Science</span>
               <small>Maseno University, Kenya</small>
             </div>
@@ -203,7 +203,7 @@ export default function Home() {
             </Reveal>
 
             <Reveal delay={0.15}>
-              <AIPlatformMockup />
+              <AIPlatformLazy />
             </Reveal>
           </div>
         </section>
@@ -498,7 +498,7 @@ export default function Home() {
           <details className="faq-card">
             <summary>Are you available for internships, developer roles, or freelance work?</summary>
             <p>
-              Yes! As a 3rd-year Computer Science student, I am actively seeking software engineering internships, AI/ML research roles, freelance product builds, and graduate opportunities where I can contribute to high-impact teams.
+              Yes! As a 4th Year Computer Science student, I am actively seeking software engineering internships, AI/ML research roles, freelance product builds, and graduate opportunities where I can contribute to high-impact teams.
             </p>
           </details>
 

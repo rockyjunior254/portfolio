@@ -1,12 +1,18 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
-import { useInView } from 'framer-motion';
 
 export function Metric({ value, suffix = '', label }: { value: number; suffix?: string; label: string }) {
   const ref = useRef<HTMLDivElement>(null);
-  const inView = useInView(ref, { once: true });
+  const [inView, setInView] = useState(false);
   const [shown, setShown] = useState(0);
+  useEffect(() => {
+    const observer = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) { setInView(true); observer.disconnect(); }
+    }, { threshold: 0.15 });
+    if (ref.current) observer.observe(ref.current);
+    return () => observer.disconnect();
+  }, []);
   useEffect(() => {
     if (!inView) return;
     const start = performance.now();

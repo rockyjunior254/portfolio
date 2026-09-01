@@ -119,25 +119,12 @@
 }
 
 .profile-image-container img {
-  object-fit: cover !important;
-  object-position: center 20% !important;
+  object-fit: contain !important;
+  object-position: center center !important;
 }
 
 .profile-floating-badge {
-  position: absolute;
-  top: 16px;
-  right: 16px;
-  background: rgba(20, 23, 21, 0.85);
-  backdrop-filter: blur(8px);
-  color: #ffffff;
-  padding: 6px 12px;
-  border-radius: 999px;
-  font-size: 11px;
-  font-weight: 600;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  display: none;
 }
 
 .profile-floating-badge .dot {
@@ -148,10 +135,7 @@
 }
 
 .profile-card-footer {
-  padding: 16px 10px 6px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  display: none;
 }
 
 .profile-info strong {
@@ -178,21 +162,7 @@
 
 /* Floating Satellite Badges */
 .floating-chip-bottom {
-  position: absolute;
-  bottom: -15px;
-  left: -20px;
-  background: #ffffff;
-  border: 1px solid var(--line);
-  border-radius: 12px;
-  padding: 10px 14px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
-  font-size: 12px;
-  font-weight: 650;
-  color: var(--ink);
-  z-index: 10;
+  display: none;
 }
 
 .floating-chip-bottom svg {

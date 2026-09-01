@@ -82,7 +82,7 @@ export default function About() {
               <div className="profile-card-footer">
                 <div>
                   <strong>Rocky Junior</strong>
-                  <small>Maseno University · Third Year</small>
+                  <small>Maseno University · 4th Year</small>
                 </div>
                 <span className="profile-role-tag">CS Developer</span>
               </div>

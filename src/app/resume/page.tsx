@@ -128,7 +128,7 @@ export default function Resume() {
                     Bachelor of Science in Computer Science
                   </h3>
                   <span style={{ fontSize: '12px', fontWeight: '700', color: 'var(--violet)', background: 'var(--violet-subtle)', padding: '4px 10px', borderRadius: '999px' }}>
-                    Third Year (Expected 2026/2027)
+                    4th Year (Expected 2026/2027)
                   </span>
                 </div>
                 <h4 style={{ fontSize: '14px', color: 'var(--muted)', fontWeight: '600', marginBottom: '16px' }}>

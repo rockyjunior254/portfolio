@@ -1,0 +1,1 @@
+.skeleton{min-height:420px;border-radius:20px;background:linear-gradient(110deg,#edf0ec 8%,#f8f9f7 18%,#edf0ec 33%);background-size:200% 100%;animation:shimmer 1.5s linear infinite}@keyframes shimmer{to{background-position:-200% 0}}@media(prefers-reduced-motion:reduce){.skeleton{animation:none}}

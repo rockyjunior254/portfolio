@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import './hero.css';
+import './motion.css';
 
 export const metadata: Metadata = {
   title: 'Rocky Junior | Software Developer & AI / Machine Learning Specialist',
