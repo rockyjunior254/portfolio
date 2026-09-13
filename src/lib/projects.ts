@@ -1,7 +1,7 @@
 export type ProjectCategory = 'all' | 'ai-ml' | 'fullstack' | 'enterprise';
 
 export type Project = {
-  id: 'universal-ai' | 'lms' | 'ttms' | 'pos' | 'ml-systems';
+  id: 'universal-ai' | 'copy-trading' | 'lms' | 'ttms' | 'pos' | 'ml-systems';
   name: string;
   eyebrow: string;
   tagline: string;
@@ -9,6 +9,7 @@ export type Project = {
   url?: string;
   featured?: boolean;
   role: string;
+  status?: 'completed' | 'in-progress';
   description: string;
   challenge: string;
   architecture: string[];
@@ -54,6 +55,42 @@ export const projects: Project[] = [
     ],
     accent: 'violet',
     impact: 'Enables seamless voice and text collaboration across diverse linguistic backgrounds, empowering cross-border business, education, and international communication.'
+  },
+  {
+    id: 'copy-trading',
+    name: 'NexusTrade Copy Trading Platform',
+    eyebrow: 'FinTech · Social Copy Trading & Asset Intelligence',
+    tagline: 'High-concurrency social copy-trading platform connecting investors with verified strategy leaders across global markets.',
+    category: 'fullstack',
+    featured: true,
+    status: 'in-progress',
+    role: 'Full-Stack FinTech Developer & System Architect',
+    description: 'A modern, multi-asset copy-trading ecosystem engineered around master trader discovery, real-time strategy mirroring, risk parameterization, and institutional account moderation. Implements live quote feeds across 27 benchmark instruments, portfolio equity analytics, and strict stop-loss guardrails.',
+    challenge: 'Executing real-time mirror trades demands low-latency synchronization between leader positions and copier portfolios, robust risk constraints (stop-loss and drawdown limits), and transactional integrity across concurrent PostgreSQL sessions.',
+    architecture: [
+      'Component-driven Next.js App Router frontend with real-time responsive Recharts analytics',
+      'Supabase PostgreSQL relational database schema with Row Level Security (RLS) & transactional triggers',
+      'Role-based access control (RBAC) supporting copiers, master strategy leaders, and platform administrators',
+      'Market data engine aggregating 27 benchmark assets across Forex, Crypto, Stocks, Commodities & Indices',
+      'Copy-trading allocation engine enforcing proportional trade sizing, stop-loss triggers, and max drawdown limits'
+    ],
+    features: [
+      'Master Trader Discovery Hub with audited 30D/1Y/All-Time returns, Sharpe ratio, and win rates',
+      '1-Click Copy Trading Allocation with custom capital caps and strict stop-loss threshold sliders',
+      'Multi-Asset Market Terminal featuring real-time quotes, mini-candlesticks, and asset category filters',
+      'Real-Time Copier Portfolio Dashboard tracking equity curves, open positions, and net PnL',
+      'Administrative Oversight Portal managing KYC verification, deposit/withdrawal moderation, and audit logs',
+      'Authentication with Supabase SSR, secure HTTP-only cookies, and role-based route middleware'
+    ],
+    technologies: ['Next.js 16', 'React 19', 'TypeScript', 'Tailwind CSS', 'Supabase', 'PostgreSQL', 'Drizzle ORM', 'Recharts', 'Zod'],
+    metrics: [
+      { label: 'Asset Classes', value: '6 Classes' },
+      { label: 'Market Assets', value: '27 Assets' },
+      { label: 'Risk Guardrails', value: 'Stop-Loss' },
+      { label: 'Dev Status', value: 'In Progress' }
+    ],
+    accent: 'emerald',
+    impact: 'Democratizes quantitative trading strategies for everyday investors while giving risk-conscious copiers granular control over loss thresholds, capital allocations, and trader selection.'
   },
   {
     id: 'lms',

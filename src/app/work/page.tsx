@@ -66,7 +66,7 @@ export default function Work() {
             onClick={() => setSelectedCategory('ai-ml')}
           >
             <BrainIcon size={14} />
-            <span>AI & Machine Learning (2)</span>
+            <span>AI & Machine Learning ({projects.filter(p => p.category === 'ai-ml').length})</span>
           </button>
           <button
             type="button"
@@ -74,7 +74,7 @@ export default function Work() {
             onClick={() => setSelectedCategory('fullstack')}
           >
             <CodeIcon size={14} />
-            <span>Full-Stack Web (2)</span>
+            <span>Full-Stack Web ({projects.filter(p => p.category === 'fullstack').length})</span>
           </button>
           <button
             type="button"
@@ -82,7 +82,7 @@ export default function Work() {
             onClick={() => setSelectedCategory('enterprise')}
           >
             <DatabaseIcon size={14} />
-            <span>Enterprise & POS (1)</span>
+            <span>Enterprise & POS ({projects.filter(p => p.category === 'enterprise').length})</span>
           </button>
         </div>
 
@@ -93,15 +93,28 @@ export default function Work() {
               <Reveal>
                 <div className="case-hero-grid">
                   <div className="case-info-col">
-                    <p className="eyebrow">
-                      0{index + 1} · {project.eyebrow}
-                    </p>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '12px' }}>
+                      <p className="eyebrow" style={{ margin: 0 }}>
+                        0{index + 1} · {project.eyebrow}
+                      </p>
+                      {project.status === 'in-progress' && (
+                        <span className="tile-status-badge in-progress">
+                          <span className="dot pulse" />
+                          <span>In Progress</span>
+                        </span>
+                      )}
+                    </div>
                     <h2>{project.name}</h2>
                     <p className="tagline">{project.tagline}</p>
                     <p className="desc">{project.description}</p>
 
                     <div className="case-actions-group">
-                      {project.url ? (
+                      {project.id === 'copy-trading' ? (
+                        <Link className="solid-button" href="/work/copy-trading">
+                          <span>Dedicated Case Study</span>
+                          <ArrowRightIcon size={14} />
+                        </Link>
+                      ) : project.url ? (
                         <a
                           className="solid-button"
                           href={project.url}
@@ -134,6 +147,13 @@ export default function Work() {
               {/* Gallery Screenshots for LMS, POS, SafariGo */}
               {['lms', 'pos', 'ttms'].includes(project.id) && (
                 <ProjectGallery project={project.id as ProjectId} gallery />
+              )}
+
+              {/* Full Interactive Suite for Copy Trading Platform */}
+              {project.id === 'copy-trading' && (
+                <div style={{ marginTop: '24px' }}>
+                  <ProjectGallery project={project.id as ProjectId} gallery />
+                </div>
               )}
 
               {/* Detailed Breakdown Quad Grid */}
@@ -184,6 +204,38 @@ export default function Work() {
                   </div>
                 </article>
               </div>
+
+              {/* In-Progress Callout Banner for Copy Trading */}
+              {project.id === 'copy-trading' && (
+                <div style={{ 
+                  marginTop: '28px', 
+                  padding: '24px', 
+                  background: '#fdfbf7', 
+                  border: '1px solid #fde68a', 
+                  borderRadius: 'var(--radius-md)',
+                  display: 'flex',
+                  justifyContent: 'space-between',
+                  alignItems: 'center',
+                  flexWrap: 'wrap',
+                  gap: '16px'
+                }}>
+                  <div>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '6px' }}>
+                      <span className="dot pulse" style={{ background: '#d97706' }} />
+                      <strong style={{ fontSize: '14px', color: '#92400e', textTransform: 'uppercase', letterSpacing: '0.5px' }}>
+                        Active Development Note
+                      </strong>
+                    </div>
+                    <p style={{ margin: 0, fontSize: '13px', color: 'var(--muted)', maxWidth: '720px', lineHeight: '1.6' }}>
+                      NexusTrade’s database schemas, trader profiles, market catalogs, and administration consoles are fully operational. Current development is focused on high-frequency WebSocket child execution and MetaTrader/FIX broker bridge APIs.
+                    </p>
+                  </div>
+                  <Link href="/work/copy-trading" className="solid-button" style={{ background: '#111413' }}>
+                    <span>View Engineering Case Study</span>
+                    <ArrowRightIcon size={14} />
+                  </Link>
+                </div>
+              )}
             </article>
           ))}
         </div>

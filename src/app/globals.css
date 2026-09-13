@@ -867,8 +867,1345 @@ button {
   border-radius: 4px;
 }
 
+/* ===================== FINTECH COPY TRADING MOCKUP & ARCHITECTURE ===================== */
+.fintech-preview-container {
+  background: #0f1512;
+  color: #e2e8f0;
+  border: 1px solid rgba(16, 185, 129, 0.25);
+  border-radius: var(--radius-md);
+  padding: 16px;
+  box-shadow: 0 8px 24px -4px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.fintech-mini-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.fintech-brand-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  font-weight: 700;
+  color: #34d399;
+}
+
+.fintech-logo-icon {
+  width: 22px;
+  height: 22px;
+  border-radius: 6px;
+  background: rgba(16, 185, 129, 0.2);
+  color: #10b981;
+  display: grid;
+  place-items: center;
+}
+
+.fintech-status-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 10px;
+  font-weight: 600;
+  color: #a7f3d0;
+  background: rgba(16, 185, 129, 0.15);
+  padding: 2px 8px;
+  border-radius: 999px;
+  border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.fintech-preview-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.trader-hero-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.trader-avatar-box {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #059669 0%, #047857 100%);
+  display: grid;
+  place-items: center;
+  color: #ffffff;
+  font-weight: 800;
+  font-size: 13px;
+  flex-shrink: 0;
+}
+
+.verified-badge {
+  position: absolute;
+  bottom: -3px;
+  right: -3px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #10b981;
+  color: #ffffff;
+  font-size: 9px;
+  display: grid;
+  place-items: center;
+  border: 2px solid #0f1512;
+}
+
+.trader-id-meta {
+  flex: 1;
+}
+
+.trader-name-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.trader-name-row h4 {
+  font-size: 14px;
+  font-weight: 700;
+  color: #f8fafc;
+  margin: 0;
+}
+
+.strategy-tag {
+  font-size: 9px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #cbd5e1;
+  padding: 1px 5px;
+  border-radius: 4px;
+}
+
+.trader-handle {
+  font-size: 11px;
+  color: #94a3b8;
+  margin: 0;
+}
+
+.trader-return-badge {
+  text-align: right;
+}
+
+.trader-return-badge small {
+  display: block;
+  font-size: 9px;
+  text-transform: uppercase;
+  color: #94a3b8;
+  font-weight: 600;
+}
+
+.trader-return-badge strong {
+  font-size: 16px;
+  font-weight: 850;
+  color: #34d399;
+}
+
+.fintech-metrics-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.04);
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.metric-strip-item {
+  text-align: center;
+}
+
+.metric-strip-item span {
+  display: block;
+  font-size: 9px;
+  color: #94a3b8;
+  text-transform: uppercase;
+}
+
+.metric-strip-item b {
+  display: block;
+  font-size: 12px;
+  font-weight: 750;
+  color: #f1f5f9;
+}
+
+.metric-strip-item b.metric-green {
+  color: #34d399;
+}
+
+.mini-chart-container {
+  position: relative;
+  height: 70px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.mini-equity-svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.chart-legend-overlay {
+  position: absolute;
+  top: 6px;
+  left: 10px;
+  right: 10px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 9px;
+  font-weight: 600;
+  color: #94a3b8;
+}
+
+.chart-legend-overlay .live-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: #34d399;
+}
+
+.fintech-preview-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 6px;
+  font-size: 11px;
+}
+
+.guardrail-note {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #94a3b8;
+  font-size: 10px;
+}
+
+.guardrail-note svg {
+  color: #34d399;
+}
+
+.copy-action-btn-sm {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  font-weight: 700;
+  color: #059669;
+  background: #ecfdf5;
+  padding: 3px 8px;
+  border-radius: 6px;
+}
+
+/* Full Interactive Fintech Component */
+.fintech-interactive-card {
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+  margin: 24px 0;
+}
+
+.fintech-main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+  background: #0f1512;
+  color: #ffffff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.fintech-header-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand-title {
+  font-size: 14px;
+  font-weight: 750;
+  color: #ffffff;
+}
+
+.ongoing-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  background: rgba(217, 119, 6, 0.2);
+  color: #fcd34d;
+  border: 1px solid rgba(245, 158, 11, 0.4);
+  padding: 3px 9px;
+  border-radius: 999px;
+}
+
+.ongoing-tag .dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #f59e0b;
+}
+
+.fintech-tab-list {
+  display: flex;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 4px;
+  border-radius: 8px;
+  flex-wrap: wrap;
+}
+
+.fintech-tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border: 0;
+  background: transparent;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 650;
+  color: #cbd5e1;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.fintech-tab:hover {
+  color: #ffffff;
+}
+
+.fintech-tab.active {
+  background: #059669;
+  color: #ffffff;
+  box-shadow: 0 2px 8px rgba(5, 150, 105, 0.4);
+}
+
+.fintech-content-body {
+  padding: 24px;
+  background: #fafbfa;
+}
+
+/* Tab 1: Discovery & Simulation */
+.trader-selection-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.selection-label {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.trader-pills {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.trader-select-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  border: 1px solid var(--line);
+  background: #ffffff;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 650;
+  color: var(--ink);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.trader-select-pill:hover {
+  border-color: #059669;
+}
+
+.trader-select-pill.active {
+  border-color: #059669;
+  background: #ecfdf5;
+  color: #065f46;
+}
+
+.pill-avatar {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #059669;
+  color: #ffffff;
+  display: grid;
+  place-items: center;
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.pill-return {
+  font-size: 11px;
+  font-weight: 750;
+  color: #059669;
+}
+
+.trader-spotlight-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 20px;
+}
+
+.leader-detail-card,
+.allocation-simulator-card {
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  padding: 22px;
+  box-shadow: var(--shadow-sm);
+}
+
+.leader-top-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 18px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.leader-bio-block {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.leader-avatar-lg {
+  position: relative;
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #059669 0%, #047857 100%);
+  display: grid;
+  place-items: center;
+  color: #ffffff;
+  font-weight: 800;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.badge-check {
+  position: absolute;
+  bottom: -4px;
+  right: -4px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #10b981;
+  color: #ffffff;
+  font-size: 11px;
+  display: grid;
+  place-items: center;
+  border: 2px solid #ffffff;
+}
+
+.leader-bio-block h3 {
+  font-size: 18px;
+  font-weight: 800;
+  margin: 0 0 2px;
+  color: var(--ink);
+}
+
+.strategy-sub {
+  font-size: 12px;
+  color: var(--muted);
+  margin: 0 0 6px;
+}
+
+.risk-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 999px;
+  text-transform: uppercase;
+}
+
+.risk-pill.balanced { background: #ecfeff; color: #0891b2; }
+.risk-pill.conservative { background: #ecfdf5; color: #059669; }
+.risk-pill.aggressive { background: #fef2f2; color: #dc2626; }
+
+.return-card-block {
+  text-align: right;
+}
+
+.return-label {
+  display: block;
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.return-value {
+  display: block;
+  font-size: 22px;
+  font-weight: 850;
+  color: #059669;
+}
+
+.return-card-block small {
+  font-size: 11px;
+  color: var(--muted);
+}
+
+.leader-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  background: #f8faf8;
+  padding: 12px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--line-subtle);
+  margin-bottom: 18px;
+}
+
+.stat-box span {
+  display: block;
+  font-size: 10px;
+  color: var(--muted);
+  text-transform: uppercase;
+  margin-bottom: 2px;
+}
+
+.stat-box b {
+  display: block;
+  font-size: 13px;
+  font-weight: 750;
+  color: var(--ink);
+}
+
+.stat-box b.green-text {
+  color: #059669;
+}
+
+.equity-curve-container {
+  margin-bottom: 18px;
+}
+
+.curve-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--muted);
+  margin-bottom: 8px;
+}
+
+.verified-audited {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: #059669;
+}
+
+.svg-chart-box {
+  height: 90px;
+  background: #fdfdfc;
+  border: 1px solid var(--line-subtle);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+
+.interactive-equity-svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.mirror-trigger-btn {
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 18px;
+  background: #111413;
+  color: #ffffff;
+  border: 0;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.mirror-trigger-btn:hover {
+  background: #059669;
+}
+
+.mirror-trigger-btn.copied {
+  background: #059669;
+}
+
+/* Allocation Simulator Card */
+.sim-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.sim-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--ink);
+}
+
+.sim-title h4 {
+  font-size: 15px;
+  font-weight: 750;
+  margin: 0;
+}
+
+.guardrail-badge {
+  font-size: 10px;
+  font-weight: 700;
+  color: #059669;
+  background: #ecfdf5;
+  padding: 2px 8px;
+  border-radius: 999px;
+  text-transform: uppercase;
+}
+
+.sim-desc {
+  font-size: 12px;
+  line-height: 1.55;
+  color: var(--muted);
+  margin-bottom: 18px;
+}
+
+.sim-field-group {
+  margin-bottom: 16px;
+}
+
+.field-label-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  margin-bottom: 6px;
+  color: var(--ink-secondary);
+}
+
+.field-label-row strong {
+  font-size: 14px;
+  color: var(--ink);
+}
+
+.field-label-row strong.amber-text {
+  color: #d97706;
+}
+
+.sim-slider {
+  width: 100%;
+  accent-color: #059669;
+  cursor: pointer;
+}
+
+.range-bounds {
+  display: flex;
+  justify-content: space-between;
+  font-size: 10px;
+  color: var(--muted-light);
+  margin-top: 2px;
+}
+
+.risk-calculation-box {
+  background: #f8faf8;
+  border: 1px solid var(--line-subtle);
+  border-radius: var(--radius-sm);
+  padding: 12px;
+  margin-bottom: 18px;
+  font-size: 12px;
+}
+
+.calc-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 4px 0;
+}
+
+.calc-row .amber-text {
+  color: #d97706;
+  font-weight: 750;
+}
+
+.confirm-allocation-btn {
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 18px;
+  background: #059669;
+  color: #ffffff;
+  border: 0;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.confirm-allocation-btn:hover {
+  background: #047857;
+}
+
+.confirm-allocation-btn.success {
+  background: #047857;
+}
+
+/* Tab 2: Market Ticker */
+.markets-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.markets-toolbar h4 {
+  font-size: 16px;
+  font-weight: 750;
+  margin: 0 0 2px;
+}
+
+.markets-toolbar p {
+  font-size: 12px;
+  color: var(--muted);
+  margin: 0;
+}
+
+.market-filter-chips {
+  display: flex;
+  gap: 6px;
+}
+
+.market-chip {
+  padding: 5px 12px;
+  border: 1px solid var(--line);
+  background: #ffffff;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 650;
+  color: var(--muted);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.market-chip.active {
+  background: #059669;
+  border-color: #059669;
+  color: #ffffff;
+}
+
+.markets-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+.market-instrument-tile {
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  padding: 14px;
+  transition: all 0.2s ease;
+}
+
+.market-instrument-tile:hover {
+  transform: translateY(-2px);
+  border-color: #059669;
+  box-shadow: var(--shadow-sm);
+}
+
+.instrument-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+
+.instrument-symbol {
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--ink);
+}
+
+.instrument-name {
+  font-size: 11px;
+  color: var(--muted);
+  margin: 0;
+}
+
+.instrument-change {
+  font-size: 11px;
+  font-weight: 750;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.instrument-change.up { background: #ecfdf5; color: #059669; }
+.instrument-change.down { background: #fef2f2; color: #dc2626; }
+
+.instrument-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.price-tag {
+  font-size: 16px;
+  font-weight: 850;
+  color: var(--ink);
+}
+
+.asset-category-pill {
+  font-size: 9px;
+  font-weight: 700;
+  text-transform: uppercase;
+  background: #f1f3ee;
+  color: var(--muted);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.instrument-sparkline {
+  height: 24px;
+}
+
+.sparkline-svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.market-architecture-callout {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  border-radius: var(--radius-sm);
+  padding: 14px 18px;
+}
+
+.callout-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: #059669;
+  color: #ffffff;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+}
+
+.callout-text strong {
+  display: block;
+  font-size: 13px;
+  color: #065f46;
+  margin-bottom: 2px;
+}
+
+.callout-text p {
+  font-size: 12px;
+  line-height: 1.5;
+  color: #166534;
+  margin: 0;
+}
+
+/* Tab 3: Visual Architecture Flow */
+.architecture-header {
+  margin-bottom: 20px;
+}
+
+.architecture-header h4 {
+  font-size: 16px;
+  font-weight: 750;
+  margin: 0 0 4px;
+}
+
+.architecture-header p {
+  font-size: 12px;
+  color: var(--muted);
+  margin: 0;
+}
+
+.visual-pipeline-flow {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+.pipeline-tier-card {
+  position: relative;
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  padding: 18px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.pipeline-tier-card:hover,
+.pipeline-tier-card.active-layer {
+  border-color: #059669;
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.pipeline-tier-card.active-layer {
+  border-width: 2px;
+  background: #fafcfb;
+}
+
+.tier-badge-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.tier-step-chip {
+  font-size: 10px;
+  font-weight: 800;
+  color: #059669;
+  background: #ecfdf5;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.tier-status-pill {
+  font-size: 9px;
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: 999px;
+  text-transform: uppercase;
+}
+
+.tier-status-pill.complete { background: #ecfdf5; color: #059669; }
+.tier-status-pill.in-progress { background: #fffbeb; color: #b45309; }
+
+.pipeline-tier-card h5 {
+  font-size: 14px;
+  font-weight: 750;
+  margin: 0 0 2px;
+  color: var(--ink);
+}
+
+.tier-subtitle {
+  display: block;
+  font-size: 11px;
+  color: #059669;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.tier-desc {
+  font-size: 11px;
+  line-height: 1.5;
+  color: var(--muted);
+  margin-bottom: 12px;
+}
+
+.tier-tech-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.tier-pill {
+  font-size: 9px;
+  font-weight: 600;
+  background: #f1f3ee;
+  color: var(--ink-secondary);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.connector-arrow {
+  position: absolute;
+  top: 50%;
+  right: -11px;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  background: #059669;
+  color: #ffffff;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  z-index: 2;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.layer-inspection-drawer {
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-left: 4px solid #059669;
+  border-radius: var(--radius-sm);
+  padding: 16px 20px;
+}
+
+.drawer-header {
+  margin-bottom: 6px;
+}
+
+.drawer-eyebrow {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #059669;
+  letter-spacing: 0.5px;
+}
+
+.drawer-header h5 {
+  font-size: 14px;
+  font-weight: 750;
+  color: var(--ink);
+  margin: 2px 0 0;
+}
+
+.drawer-content p {
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--muted);
+  margin: 0;
+}
+
+/* Tab 4: Roadmap & Progress */
+.roadmap-header {
+  margin-bottom: 20px;
+}
+
+.roadmap-header h4 {
+  font-size: 16px;
+  font-weight: 750;
+  margin: 0 0 4px;
+}
+
+.roadmap-header p {
+  font-size: 12px;
+  color: var(--muted);
+  margin: 0;
+}
+
+.roadmap-progress-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.roadmap-column {
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  padding: 20px;
+}
+
+.roadmap-column.ongoing {
+  border-color: #fcd34d;
+}
+
+.column-header {
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--line-subtle);
+}
+
+.col-status-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 3px 8px;
+  border-radius: 999px;
+  margin-bottom: 6px;
+}
+
+.col-status-tag.completed { background: #ecfdf5; color: #059669; }
+.col-status-tag.ongoing { background: #fffbeb; color: #b45309; }
+
+.column-header h5 {
+  font-size: 15px;
+  font-weight: 750;
+  color: var(--ink);
+  margin: 0;
+}
+
+.roadmap-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.roadmap-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.roadmap-list li svg {
+  color: #059669;
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.roadmap-list li svg.amber-icon {
+  color: #d97706;
+}
+
+.roadmap-list li strong {
+  display: block;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 2px;
+}
+
+.roadmap-list li p {
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--muted);
+  margin: 0;
+}
+
+/* Dedicated Case Study Page Styles */
+.case-study-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--muted);
+  margin-bottom: 24px;
+}
+
+.case-study-breadcrumb a:hover {
+  color: #059669;
+}
+
+.case-study-hero {
+  padding: 40px 0 20px;
+}
+
+.case-study-status-banner {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #b45309;
+  background: #fffbeb;
+  border: 1px solid #fde68a;
+  padding: 6px 14px;
+  border-radius: 999px;
+  margin-bottom: 18px;
+}
+
+.case-study-hero h1 {
+  font-size: clamp(36px, 4.5vw, 54px);
+  letter-spacing: -2px;
+  line-height: 1.06;
+  margin-bottom: 16px;
+}
+
+.case-study-hero h1 em {
+  font-style: italic;
+  color: #059669;
+  font-family: Georgia, serif;
+}
+
+.case-study-lead {
+  font-size: 18px;
+  line-height: 1.7;
+  color: var(--muted);
+  max-width: 860px;
+  margin-bottom: 30px;
+}
+
+.case-study-meta-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  padding: 20px 24px;
+  margin-bottom: 40px;
+  box-shadow: var(--shadow-sm);
+}
+
+.meta-item span {
+  display: block;
+  font-size: 11px;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+
+.meta-item strong {
+  display: block;
+  font-size: 14px;
+  font-weight: 750;
+  color: var(--ink);
+}
+
+.case-section {
+  padding: 60px 0;
+  border-top: 1px solid var(--line);
+}
+
+.case-section-head {
+  max-width: 760px;
+  margin-bottom: 36px;
+}
+
+.case-section-head h2 {
+  font-size: 32px;
+  letter-spacing: -1.2px;
+  margin: 0 0 12px;
+}
+
+.case-section-head p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--muted);
+  margin: 0;
+}
+
+.journey-steps-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.journey-step-card {
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  padding: 24px;
+  box-shadow: var(--shadow-sm);
+}
+
+.step-badge {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 800;
+  font-family: ui-monospace, monospace;
+  color: #059669;
+  background: #ecfdf5;
+  padding: 3px 8px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+
+.journey-step-card h3 {
+  font-size: 17px;
+  font-weight: 750;
+  margin: 0 0 8px;
+  color: var(--ink);
+}
+
+.journey-step-card p {
+  font-size: 13px;
+  line-height: 1.65;
+  color: var(--muted);
+  margin: 0;
+}
+
+/* Responsive adjustments for Fintech components */
+@media (max-width: 1024px) {
+  .trader-spotlight-grid {
+    grid-template-columns: 1fr;
+  }
+  .markets-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .visual-pipeline-flow {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .connector-arrow {
+    display: none;
+  }
+  .case-study-meta-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .journey-steps-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .markets-cards-grid {
+    grid-template-columns: 1fr;
+  }
+  .visual-pipeline-flow {
+    grid-template-columns: 1fr;
+  }
+  .roadmap-progress-columns {
+    grid-template-columns: 1fr;
+  }
+  .case-study-meta-grid {
+    grid-template-columns: 1fr;
+  }
+  .leader-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 /* Modern Project Card Styling */
 .project-row {
+
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 28px;
@@ -913,6 +2250,31 @@ button {
   text-transform: uppercase;
   letter-spacing: 0.6px;
   color: var(--violet);
+}
+
+.tile-status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  padding: 3px 10px;
+  border-radius: 999px;
+}
+
+.tile-status-badge.in-progress {
+  background: #fffbeb;
+  color: #b45309;
+  border: 1px solid #fde68a;
+}
+
+.tile-status-badge.in-progress .dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #d97706;
+  display: inline-block;
 }
 
 .tile-index-pill {

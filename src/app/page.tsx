@@ -139,11 +139,11 @@ export default function Home() {
             <div className="metric-card">
               <div className="metric-card-top">
                 <CodeIcon size={22} className="metric-icon" />
-                <span className="eyebrow" style={{ margin: 0 }}>Production</span>
+                <span className="eyebrow" style={{ margin: 0 }}>Production & Ongoing</span>
               </div>
-              <b>5+</b>
-              <span>Complete Major Systems</span>
-              <small>LMS, POS, Travel, ML & AI</small>
+              <b>6+</b>
+              <span>Major Software Systems</span>
+              <small>FinTech, AI, LMS, POS & ML</small>
             </div>
           </Reveal>
 
@@ -289,7 +289,7 @@ export default function Home() {
               </h2>
             </div>
             <p>
-              From cloud learning platforms and business point-of-sale systems to interactive travel engines, each project is designed with performance, scalability, and clean UX.
+              From real-time social copy-trading engines and enterprise learning platforms to point-of-sale systems and travel engines, each project is designed with performance, scalability, and clean UX.
             </p>
           </div>
 

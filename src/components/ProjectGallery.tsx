@@ -4,9 +4,10 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import styles from './ProjectGallery.module.css';
 import { AIPlatformMockup } from './AIPlatformMockup';
+import { CopyTradingMockup } from './CopyTradingMockup';
 import { BrainIcon, CpuIcon, DatabaseIcon, SparklesIcon, CheckCircleIcon } from './Icons';
 
-export type ProjectId = 'universal-ai' | 'lms' | 'pos' | 'ttms' | 'ml-systems';
+export type ProjectId = 'universal-ai' | 'copy-trading' | 'lms' | 'pos' | 'ttms' | 'ml-systems';
 
 const imageCounts: Record<string, number> = {
   lms: 8,
@@ -19,6 +20,10 @@ export function ProjectGallery({ project, gallery = false }: { project: ProjectI
 
   if (project === 'universal-ai') {
     return <AIPlatformMockup />;
+  }
+
+  if (project === 'copy-trading') {
+    return <CopyTradingMockup previewMode={!gallery} />;
   }
 
   if (project === 'ml-systems') {

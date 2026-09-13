@@ -39,7 +39,15 @@ export function ProjectCard({ project, index }: { project: Project; index: numbe
           {getCategoryIcon(project.category)}
           <span>{project.eyebrow}</span>
         </div>
-        <span className="tile-index-pill">0{index + 1}</span>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+          {project.status === 'in-progress' && (
+            <span className="tile-status-badge in-progress">
+              <span className="dot pulse" />
+              <span>In Progress</span>
+            </span>
+          )}
+          <span className="tile-index-pill">0{index + 1}</span>
+        </div>
       </div>
 
       <div className="tile-preview-container">
@@ -49,7 +57,7 @@ export function ProjectCard({ project, index }: { project: Project; index: numbe
       <div className="tile-content-modern">
         <div className="tile-header-area">
           <h3 className="tile-project-title">
-            <Link href={`/work#${project.id}`}>
+            <Link href={project.id === 'copy-trading' ? '/work/copy-trading' : `/work#${project.id}`}>
               {project.name}
             </Link>
           </h3>
@@ -80,8 +88,11 @@ export function ProjectCard({ project, index }: { project: Project; index: numbe
 
         {/* Actions Bar */}
         <div className="tile-actions-modern">
-          <Link href={`/work#${project.id}`} className="tile-cta-primary">
-            <span>Case Study</span>
+          <Link 
+            href={project.id === 'copy-trading' ? '/work/copy-trading' : `/work#${project.id}`} 
+            className="tile-cta-primary"
+          >
+            <span>{project.status === 'in-progress' ? 'Explore Project' : 'Case Study'}</span>
             <ArrowRightIcon size={14} />
           </Link>
 
